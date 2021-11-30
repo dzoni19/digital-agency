@@ -1,0 +1,26 @@
+@use '../custom' as *;
+
+// grediant
+
+@mixin gradient {
+  background: linear-gradient(
+    to right,
+    rgba($primary, 0.95),
+    rgba($secondary, 0.95)
+  );
+}
+
+// position centar
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// transition
+
+@mixin transitionProperty {
+  transition: all 0.7s ease-in-out;
+}

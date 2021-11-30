@@ -1,0 +1,46 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.rounded-pill {
+  //   @include media-breakpoint-down(sm) {
+  //     display: none;
+  //   }
+  border: 1px solid $white;
+  border-radius: 50%;
+  padding: 0.7rem 3.9rem 0.7rem 1.2rem;
+  position: relative;
+  background: $white;
+  font-weight: 600;
+
+  span {
+    position: absolute;
+    background: $primary;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 50%;
+    right: 5px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    i {
+      font-size: 1rem;
+      line-height: 2.5rem;
+      color: $white;
+    }
+  }
+
+  &:hover {
+    @include gradient;
+    color: $white;
+
+    span {
+      background: rgba($black, 0.6);
+    }
+  }
+}
+.btn-rounded {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+  margin: 1rem 0;
+}

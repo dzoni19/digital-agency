@@ -1,0 +1,112 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.footer {
+  background: $footer;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  @include media-breakpoint-down(sm) {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  &_icon {
+    stroke: $secondary;
+    width: 4rem;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &_info {
+    margin-left: 1rem;
+    padding: 0.4rem;
+
+    &-title {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: $white;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+      }
+    }
+    &-subtitle {
+      color: $gray-600;
+      font-size: 1rem;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+// STYLE THE CAMPANY INFO CONTENT
+.footer-sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+
+  .campany-list {
+    display: block;
+    list-style-type: none;
+    position: relative;
+
+    li {
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+
+      a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+// STYLE THE COPYRIGHT  CONTENT
+.footer-bottom {
+  background-color: $black;
+
+  &__copyright {
+    color: $gray-600;
+    font-weight: 400;
+
+    a {
+      color: $gray-300;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// STYLE THE BACK TO TOP BUTTON
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+
+  i {
+    color: $white;
+    font-size: 1rem;
+    @include absoluteCenter;
+  }
+}
